@@ -9,6 +9,8 @@ to make the prediction you need to write the json-string in the input bar, for i
 
 {'id': 7, 'book_title': 'Ball Complete Book of Home Preserving', 'book_image_url': 'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1328809237l/843016.jpg', 'book_desc': 'Ball Complete Book of Home Preserving contains over 400 delicious and creative recipes. Home canning puts the pleasures of eating natural, delicious produce at your fingertips year round. Preserving food is as modern and practical as the latest food trend, and its really quite simple. Easy-to-understand detailed instructions provide all the information you need before you begin a project. Enjoy the rewards of numerous homemade meals and snacks, created from just one preserving session.', 'book_genre': 'Food and Drink|Cookbooks|Food and Drink|Cooking|Food and Drink|Food|Nonfiction|Reference|Cooking|Food Preservation|How To|Gardening|Food and Drink|Culinary|Adventure|Survival', 'book_authors': 'Judi Kingry|Laura Devine', 'book_format': 'Paperback', 'book_pages': '448 pages', 'book_review_count': 136, 'book_rating_count': 8659}
 
+!!!!!It may make the prediction for several minutes for the first time because downloading needed models. Just wait. After the first Tim it would be faster
+
 
 
 you can also make a request th the server from other python scripts running on you computer by this comands:

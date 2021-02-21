@@ -12,9 +12,11 @@ class My_model:
 
   def prepare_data(self, data):
     from sentence_transformers import SentenceTransformer
-    #model_encod = SentenceTransformer('bert-base-multilingual-cased')
-    #pickle.dump(model_encod, open('model_encod.pkl','wb'))
-    model_encod = pickle.load(open('model_encod.pkl', 'rb'))
+    try:
+      model_encod = pickle.load(open('model_encod.pkl', 'rb'))
+    except:
+      model_encod = SentenceTransformer('bert-base-multilingual-cased')
+      pickle.dump(model_encod, open('model_encod.pkl','wb'))
     x, y = data['book_desc'], data['book_genre']
     t = (data['book_rating_count'] -33723.66)/198754.65
     data1 = np.array(list(model_encod.encode(x)) + list(model_encod.encode(y)) + [t])
