@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Super Puper Interface</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+
+<body style="background: #000;">
+ <div class="login">
+	<h1>Book Rate Forecasting</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="rate" placeholder="Enter json here" required="required" />
+
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict book's rate</button>
+    </form>
+
+   <br>
+
+   <table>
+    <tbody>
+    <tr>
+    <td>id</td>
+    <td>{{ id }}</td>
+    </tr>
+    <tr>
+    <td>book_title</td>
+    <td>{{ book_title }}</td>
+    </tr>
+    <tr>
+    <td>book_genre</td>
+    <td>{{ book_genre }}</td>
+    </tr>
+    <tr>
+    <td>book_desc</td>
+    <td>{{ book_desc }}</td>
+    </tr>
+    <tr>
+    <td>book_authors</td>
+    <td>{{ book_authors }}</td>
+    </tr>
+    
+    </tbody>
+    </table>
+
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
